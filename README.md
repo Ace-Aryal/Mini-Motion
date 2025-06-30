@@ -163,3 +163,5 @@ If you’d like, I can also show you:
 - how to compare passwords on login (using `bcrypt.compare`),
 - or how to only hash if password was changed on `update`.
   Just tell me! 🚀
+
+### 3.Connection to db
