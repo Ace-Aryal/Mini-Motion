@@ -16,7 +16,7 @@ export async function connectToDB() {
   }
   if (!cached.promise) {
     const options = {};
-    await mongoose
+    cached.promise = mongoose
       .connect(MONGODB_URI, options)
       .then(() => mongoose.connection);
   }

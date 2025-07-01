@@ -1,3 +1,4 @@
+// this route is to get tokens before upload
 import { getUploadAuthParams } from "@imagekit/next/server";
 
 export async function GET() {

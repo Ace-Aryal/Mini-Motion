@@ -1,14 +1,13 @@
+// getting and posting video : Imagekit
 import { connectToDB } from "@/lib/db";
-import User from "@/models/User";
 import Video, { TVideo } from "@/models/Video";
-import { error } from "console";
 import { getServerSession } from "next-auth";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET() {
   try {
     await connectToDB();
-    const videos = await User.find({}).sort({ cretedAt: -1 }).lean();
+    const videos = await Video.find({}).sort({ cretedAt: -1 }).lean();
     if (!videos || videos.length === 0) {
       return NextResponse.json([], { status: 200 });
     }
